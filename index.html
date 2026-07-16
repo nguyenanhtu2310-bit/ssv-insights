@@ -1,166 +1,620 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSV Endurance Insights — Weekly Regional Briefing</title>
+    <title>BẢN TIN SỰ KIỆN THỂ THAO | Số tháng 7/2026</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --ssv-green: #4CAF50;
+            --ssv-dark: #111111;
+            --ssv-gray: #f9f9f9;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background-color: #f4f5f7;
-            color: #2b2b2b;
-            line-height: 1.5;
-            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
         }
-        .page-container {
-            background-color: #ffffff;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px 60px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+        /* ĐỊNH DẠNG TRANG RIÊNG BIỆT */
+        .page {
+            max-width: 750px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+            page-break-after: always; /* Hỗ trợ in ấn/ngắt trang nếu cần */
         }
-        .doc-header {
-            border-bottom: 2px solid #e1e4e8;
-            padding-bottom: 20px;
-            margin-bottom: 35px;
-            position: relative;
+
+        /* PHẦN ĐẦU TRANG (HEADER) */
+        .page-header {
+            text-align: center;
+            border-bottom: 3px solid var(--ssv-green);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
         }
-        .top-accent-bar {
-            height: 6px;
-            background-color: #1a2e40;
-            position: absolute;
-            top: -50px; left: -60px; right: -60px;
-        }
-        .meta-strip {
+
+        .top-bar {
             display: flex;
             justify-content: space-between;
-            font-size: 9pt;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--ssv-dark);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--ssv-dark);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .issue-badge {
+            background-color: var(--ssv-dark);
+            color: #ffffff;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #6a737d;
-            margin-bottom: 12px;
+            white-space: nowrap;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #666666;
+            font-weight: 500;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            color: var(--ssv-green);
+        }
+
+        .page-title {
+            color: var(--ssv-dark);
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .page-subtitle {
+            color: #666666;
+            font-size: 13px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* TRANG 1: BỐ CỤC 2 CỘT BẤT ĐỐI XỨNG */
+        .main-content-p1 {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .left-column-p1 {
+            flex: 1.8;
+        }
+
+        .left-column-p1 h2 {
+            font-size: 20px;
+            color: var(--ssv-dark);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .article-body-p1 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .text-block-p1 {
+            flex: 1;
+            font-size: 13.5px;
+            text-align: justify;
+            color: #444444;
+        }
+
+        .text-block-p1 p {
+            margin: 0 0 15px 0;
+        }
+
+        .highlight-box-p1 {
+            background-color: var(--ssv-gray);
+            border-left: 3px solid var(--ssv-green);
+            padding: 12px;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 15px;
+            color: #555555;
+        }
+
+        .signature-p1 {
+            margin-top: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--ssv-green);
+            font-style: italic;
+        }
+
+        .right-column-p1 {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .toc-box {
+            border: 1px solid var(--ssv-dark);
+            padding: 20px;
+            background-color: #ffffff;
+            min-height: 380px;
+            box-sizing: border-box;
+        }
+
+        .toc-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--ssv-dark);
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--ssv-dark);
+            padding-bottom: 8px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 12.5px;
             font-weight: 600;
+            color: #444444;
         }
-        h1 { font-size: 20pt; font-weight: 700; color: #1a2e40; margin-bottom: 6px; }
-        .subtitle { font-size: 11pt; color: #d96b43; font-weight: 500; }
-        h2 {
-            font-size: 13.5pt; font-weight: 700; color: #1a2e40;
-            margin-top: 30px; margin-bottom: 15px; padding-left: 10px;
-            border-left: 4px solid #1a2e40; page-break-after: avoid;
+
+        .toc-item:last-child {
+            border-bottom: none;
         }
-        p { font-size: 10.5pt; margin-bottom: 14px; text-align: justify; color: #333333; }
-        .callout-box {
-            background-color: #f8f9fa; border: 1px solid #e9ecef;
-            border-left: 4px solid #d96b43; border-radius: 4px;
-            padding: 16px 20px; margin: 20px 0;
+
+        .toc-item span {
+            display: block;
+            font-size: 11px;
+            color: #888888;
+            font-weight: 400;
+            margin-top: 2px;
+            text-transform: uppercase;
         }
-        .callout-box h3 { font-size: 11pt; color: #1a2e40; margin-bottom: 6px; }
-        .callout-box p { font-size: 9.5pt; color: #495057; font-style: italic; margin-bottom: 0; }
-        .step-container { margin: 15px 0; padding-left: 15px; }
-        .step-item { position: relative; padding-bottom: 12px; padding-left: 20px; }
-        .step-number {
-            position: absolute; left: -15px; top: 2px;
-            background-color: #1a2e40; color: #ffffff; font-size: 8pt;
-            width: 18px; height: 18px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+
+        /* TRANG 2: BỐ CỤC LƯỚI LÀ BÀN 4 Ô ĐỐI XỨNG */
+        .grid-container-p2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
         }
-        .step-title { font-size: 10.5pt; font-weight: 600; color: #1a2e40; }
-        .step-desc { font-size: 9.5pt; color: #555555; }
-        .warning-box {
-            background-color: #fff5f5; border: 1px solid #ffe3e3;
-            border-radius: 4px; padding: 14px 18px; margin: 18px 0;
-            display: flex; gap: 12px;
+
+        .grid-box-p2 {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
         }
-        .warning-icon { color: #e53e3e; font-weight: bold; }
-        .warning-content h4 { font-size: 10pt; color: #9b2c2c; font-weight: 600; }
-        .warning-content p { font-size: 9.5pt; color: #c53030; margin-bottom: 0; }
-        .doc-footer { margin-top: 40px; border-top: 1px solid #e1e4e8; padding-top: 25px; }
-        .brand-slug { font-size: 11pt; font-weight: 800; color: #1a2e40; }
-        .footer-text { font-size: 9.5pt; color: #6a737d; margin-top: 8px; font-style: italic; }
-        @media print {
-            body { background-color: #ffffff; padding: 0; }
-            .page-container { box-shadow: none; padding: 0; max-width: 100%; }
-            .top-accent-bar { display: none; }
+
+        .section-title-p2 {
+            color: var(--ssv-green);
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-bottom: 2px solid var(--ssv-green);
+            padding-bottom: 5px;
+        }
+
+        .grid-box-p2 p {
+            font-size: 13.5px;
+            margin: 0 0 10px 0;
+            text-align: justify;
+        }
+
+        .grid-box-p2 ul {
+            margin: 0 0 10px 0;
+            padding-left: 18px;
+            font-size: 13px;
+        }
+
+        .grid-box-p2 li {
+            margin-bottom: 6px;
+        }
+
+        .inline-link {
+            color: var(--ssv-green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: auto;
+            padding-top: 10px;
+            display: inline-block;
+        }
+
+        .inline-link:hover {
+            text-decoration: underline;
+        }
+
+        /* TRANG 3: BỐ CỤC DÒNG LỊCH TRÌNH SỰ KIỆN */
+        .event-row-p3 {
+            display: flex;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .event-date-badge-p3 {
+            background-color: var(--ssv-green);
+            color: #ffffff;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            flex-shrink: 0;
+            padding: 10px;
+        }
+
+        .event-date-badge-p3 .month {
+            font-size: 13px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .event-date-badge-p3 .day {
+            font-size: 26px;
+            line-height: 1;
+            margin: 4px 0;
+        }
+
+        .event-date-badge-p3 .year {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .event-content-p3 {
+            padding: 15px 20px;
+            flex-grow: 1;
+            background: #ffffff;
+        }
+
+        .event-name-p3 {
+            color: var(--ssv-dark);
+            font-size: 16px;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+
+        .event-details-p3 {
+            font-size: 13.5px;
+            margin: 0;
+            color: #555555;
+            text-align: justify;
+        }
+
+        /* PHẦN 5: VALUE DROP KHỐI CUỐI TRANG */
+        .value-box-p3 {
+            background-color: var(--ssv-gray);
+            border-left: 4px solid var(--ssv-green);
+            padding: 25px;
+            margin-top: 35px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .value-title-p3 {
+            color: var(--ssv-dark);
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn-form-p3 {
+            display: inline-block;
+            background-color: var(--ssv-green);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 4px;
+            margin: 15px 0;
+            transition: background 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-form-p3:hover {
+            background-color: #45a049;
+        }
+
+        .contact-info-p3 {
+            font-size: 13px;
+            color: #666666;
+            margin-top: 15px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-info-p3 a {
+            color: var(--ssv-green);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE CHO DI ĐỘNG */
+        @media (max-width: 680px) {
+            .page {
+                padding: 20px;
+                margin: 15px 10px;
+            }
+            .main-content-p1 {
+                flex-direction: column;
+            }
+            .article-body-p1 {
+                flex-direction: column;
+            }
+            .right-column-p1 {
+                min-width: 100%;
+            }
+            .toc-box {
+                min-height: auto;
+            }
+            .grid-container-p2 {
+                grid-template-columns: 1fr;
+            }
+            .event-row-p3 {
+                flex-direction: column;
+            }
+            .event-date-badge-p3 {
+                width: 100%;
+                flex-direction: row;
+                gap: 10px;
+                padding: 10px 0;
+            }
+            .event-date-badge-p3 .day {
+                font-size: 20px;
+                margin: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="page-container">
-    <div class="top-accent-bar"></div>
-
-    <header class="doc-header">
-        <div class="meta-strip">
-            <span>SSV Endurance Insights</span>
-            <span>Issue No. 01 — July 2026</span>
+    <!-- ============================================= -->
+    <!-- TRANG 1: CẬP NHẬT TÓM TẮT HÀNH TRÌNH VÀ MỤC LỤC -->
+    <!-- ============================================= -->
+    <div class="page">
+        <!-- THANH TIÊU ĐỀ TRÊN CÙNG -->
+        <div class="top-bar">
+            <h1 class="newsletter-title">Bản tin Sự kiện Thể thao</h1>
+            <div class="issue-badge">Số tháng 7 / 2026</div>
         </div>
-        <h1>SSV ENDURANCE INSIGHTS</h1>
-        <div class="subtitle">Operational Intelligence & Tech Innovation for Elite ASEAN Organizers</div>
-    </header>
-
-    <section>
-        <h2>1. The Global Focus & Strategic Spark</h2>
-        <p>The global mass-participation market is facing a critical inflection point in runner metrics. According to data gathered from mass-participation forums, the accelerating adoption of elite carbon-plated footwear among amateur waves has artificially compressed finishing windows. Mid-pack clusters are arriving at aid stations up to 7% faster than historical trail and road baselines dictate, fundamentally modifying the timeline required for resource management.</p>
         
-        <div class="callout-box">
-            <h3>💡 The Mind-Opener Framework</h3>
-            <p>If your course timeline relies entirely on data from five years ago, your peak supply chain pressure points (water volume, medical fatigue) are hitting earlier than planned. Are your wave architectures engineered to accommodate structural spikes in pack velocity?</p>
+        <!-- THÔNG TIN PHÁT HÀNH -->
+        <div class="meta-info">
+            <span class="brand-name">SPORTSTATS VIETNAM</span>
+            <span>Phát hành: 16 Tháng 7, 2026</span>
         </div>
-    </section>
 
-    <section>
-        <h2>2. The ASEAN Pulse: Trail & Sport Tourism Movements</h2>
-        <p>Strategic data from the <i>Asia Trail Master</i> circuit highlights a massive operational migration away from tier-1 capital areas toward rural eco-tourism environments across Thailand, Malaysia, and the Philippines. Independent organizers are successfully leverage micro-grants and subsidized security protocols from municipal authorities desperate to drive regional weekend hospitality metrics. However, deep-jungle trail extensions across recent events in the region have run into severe logistical stress due to tropical storm tracking protocols, reinforcing the need for flexible fallback course routing.</p>
-    </section>
+        <!-- BỐ CỤC 2 CỘT CHÍNH -->
+        <div class="main-content-p1">
+            
+            <!-- CỘT TRÁI: TỔNG THUẬT VÀ KHỐI SỐ LIỆU -->
+            <div class="left-column-p1">
+                <h2>Điểm lại hành trình vận hành vừa qua và những cột mốc đáng nhớ!</h2>
+                
+                <div class="article-body-p1">
+                    <!-- Cột chữ 1 -->
+                    <div class="text-block-p1">
+                        <p>Chào mừng các nhà điều hành giải đấu đến với bản tin cập nhật định kỳ của Sportstats Vietnam (SSV). Trong hai tháng vừa qua, đội ngũ kỹ thuật của chúng tôi đã liên tục tác nghiệp tại hiện trường để bảo chứng công nghệ tính giờ cho hàng loạt giải đấu lớn nhỏ khắp cả nước.</p>
+                        <p>Một trong những điểm sáng lớn nhất là việc hoàn thành xuất sắc chuỗi sự kiện ba phối hợp và chạy bộ mass-participation trong giai đoạn đầu mùa hè. Hạ tầng thiết bị cốt lõi với cấu hình thảm đôi dự phòng (Mat Redundancy) đã hoạt động chính xác 100%, ghi nhận dữ liệu sạch bất chấp các wave vận động viên đổ về đích với mật độ cực cao.</p>
+                    </div>
+                    
+                    <!-- Cột chữ 2 -->
+                    <div class="text-block-p1">
+                        <p>Bên cạnh các con số chính xác trên bảng điện tử, câu chuyện lớn nhất mà SSV ghi nhận tại hiện trường chính là nỗ lực tối ưu hóa trải nghiệm tương tác số cho cộng đồng. Khâu quản lý dữ liệu xuất phát và trả kết quả realtime qua hệ thống SMS/Kiosk điện tử đã giúp giảm tải áp lực đáng kể cho các ban tổ chức giải đấu.</p>
+                        <div class="highlight-box-p1">
+                            "Con số ấn tượng: Hơn 15.000 lượt chip quét hợp lệ được xử lý realtime với tỷ lệ drop chip bằng 0 trong chuỗi giải đấu vừa qua."
+                        </div>
+                        <p style="margin-top: 15px;">Hy vọng những chia sẻ và công cụ thực chiến trong số này sẽ là nguồn tham khảo hữu ích cho giải đấu sắp tới của anh/chị!</p>
+                        <div class="signature-p1">Đội ngũ Vận hành SSV x</div>
+                    </div>
+                </div>
+            </div>
 
-    <section>
-        <h2>3. The Course Manager's Drawing Board: Low-Cost GPS Precision</h2>
-        <p>Streamlining physical asset deployment on a tight operational budget requires moving away from static paper mapping architectures. Course managers can optimize crowd density matrices using specific three-step parameters:</p>
-        
-        <div class="step-container">
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-title">Dynamic GPX Layering</div>
-                <div class="step-desc">Utilize free tools like Plotaroute to embed target coordinate tags for evacuation gates directly into the athlete-facing GPS files.</div>
+            <!-- CỘT PHẢI: KHUNG MỤC LỤC TÓM TẮT ĐỀ MỤC -->
+            <div class="right-column-p1">
+                <div class="toc-box">
+                    <h3 class="toc-title">Nội dung chính trong số này:</h3>
+                    <ul class="toc-list">
+                        <li class="toc-item">
+                            Cập nhật Sportstats Vietnam
+                            <span>Trang 1 • Điểm tin vận hành</span>
+                        </li>
+                        <li class="toc-item">
+                            Cập nhật Điểm sáng Chiến lược
+                            <span>Trang 2 • Tầm nhìn vĩ mô Gen Z</span>
+                        </li>
+                        <li class="toc-item">
+                            Command Center của Giám đốc Giải đấu
+                            <span>Trang 2 • Quy trình Layout Expo</span>
+                        </li>
+                        <li class="toc-item">
+                            Công cụ Quản lý Đường đua
+                            <span>Trang 2 • Ứng dụng RideWithGPS</span>
+                        </li>
+                        <li class="toc-item">
+                            Góc nhìn An toàn & Y tế
+                            <span>Trang 2 • Radar thời tiết Windy</span>
+                        </li>
+                        <li class="toc-item">
+                            Lịch trình Sự kiện Sắp tới
+                            <span>Trang 3 • Điểm tin 1 - 2 tháng tới</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-title">The First-Km Buffer Rule</div>
-                <div class="step-desc">Establish an absolute minimum layout width of 6 meters for the opening 2,000 meters of any multi-sport or running event to thin the pack naturally.</div>
-            </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-title">Computer-Vision Marshalling</div>
-                <div class="step-desc">Repurpose basic stationary cameras at remote trail intersections to live-stream field numbers back to your central scoring tent.</div>
-            </div>
-        </div>
-    </section>
 
-    <section>
-        <h2>4. The Medical & Safety Directive</h2>
-        <p>Managing severe environmental load triggers in high-humidity regional environments requires real-time tracking of thermal risk matrices. Standard commercial weather applications completely fail to evaluate radiant soil temperature and localized humidity percentages accurately.</p>
-        
-        <div class="warning-box">
-            <span class="warning-icon">⚠️</span>
-            <div class="warning-content">
-                <h4>Critical Risk Alert: Wet Bulb Globe Temperature (WBGT) Triggers</h4>
-                <p>Medical directors must mandate that roving marshal leads use field-level heat indexes. Once regional thresholds are crossed, an immediate flag status shift must scale hydration volumes by 25% at subsequent aid stations to proactively combat cluster heat exhaustion cases.</p>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- TRANG 2: BỐ CỤC LƯỚI LÀ BÀN ĐIỀU HÀNH 4 PHẦN -->
+    <!-- ============================================= -->
+    <div class="page">
+        <div class="page-header">
+            <h1 class="page-title">BẢN TIN SỰ KIỆN THỂ THAO</h1>
+            <span class="page-subtitle">Số tháng 7 / 2026 | Trang 2: La bàn Điều hành chuyên môn</span>
+        </div>
+
+        <div class="grid-container-p2">
+            <!-- PHẦN 1 -->
+            <div class="grid-box-p2">
+                <div class="section-title-p2">PHẦN 1: CẬP NHẬT ĐIỂM SÁNG CHIẾN LƯỢC</div>
+                <p><strong>Tầm nhìn vĩ mô:</strong> Dữ liệu từ World Athletics cho thấy Gen Z đang dịch chuyển các giải đấu từ "thuần đua thành tích" sang "nền tảng kết nối xã hội ngoài trời". Lượng tương tác và check-in tại các trạm trải nghiệm hình ảnh tăng 45%.</p>
+                <p><strong>Chẩn đoán:</strong> Nếu giải đấu chỉ có thảm timing và chai nước suối khi về đích, bạn có thể đang bỏ sót 40% tỷ lệ vận động viên quay lại.</p>
+                <a href="https://worldathletics.org/news" target="_blank" class="inline-link">🔗 Xem xu hướng thị trường →</a>
+            </div>
+
+            <!-- PHẦN 2 -->
+            <div class="grid-box-p2">
+                <div class="section-title-p2">PHẦN 2: COMMAND CENTER CỦA GIÁM ĐỐC GIẢI ĐẤU</div>
+                <p><strong>Bài toán vận hành:</strong> Khủng hoảng tình nguyện viên bỏ vị trí phát Kit/Check-in khung 60-90 ngày trước giải gây ùn tắc nghiêm trọng tại Expo lúc 4:00 AM.</p>
+                <p><strong>Giải pháp:</strong> Triệt tiêu tra cứu sổ giấy. Phân khu theo block số BIB cố định kết hợp hạ tầng quét QR trên máy tính bảng. Cấu hình chuẩn: 1 thiết bị/300 VĐV, xử lý dưới 4 giây/người.</p>
+                <a href="https://www.racedirectorshq.com/articles/" target="_blank" class="inline-link">🔗 Tải tài liệu sơ đồ Expo →</a>
+            </div>
+
+            <!-- PHẦN 3 -->
+            <div class="grid-box-p2">
+                <div class="section-title-p2">PHẦN 3: CÔNG CỤ QUẢN LÝ ĐƯỜNG ĐUA</div>
+                <p><strong>Công nghệ số:</strong> Ứng dụng nền tảng <strong>RideWithGPS</strong> để đo đạc cao độ và thiết kế đường đua trực quan độ chính xác cao.</p>
+                <p><strong>Quy tắc route:</strong> Tránh đặt điểm quay đầu (U-Turn) sát trạm tiếp nước dưới 150m để hạn chế nút thắt cổ chai. Khi xuất tệp GPX cho đồng hồ thể thao, hãy bật tính năng hiển thị mốc chỉ dẫn (Cue Sheets) nhằm cảnh báo góc khuất.</p>
+                <a href="https://www.plotaroute.com/" target="_blank" class="inline-link">🔗 Hướng dẫn tối ưu tệp GPX →</a>
+            </div>
+
+            <!-- PHẦN 4 -->
+            <div class="grid-box-p2">
+                <div class="section-title-p2">PHẦN 4: GÓC NHÌN AN TOÀN & Y TẾ</div>
+                <p><strong>Quản trị thời tiết:</strong> Thiết lập giao thức theo dõi khí hậu đa kênh từ 10-15 ngày trước sự kiện để đối phó rủi ro sốc nhiệt, mưa bão tại Việt Nam:</p>
+                <ul>
+                    <li>Dùng <strong>Windy.com</strong> theo dõi radar lượng mưa theo giờ.</li>
+                    <li>Theo dõi bản tin khí hậu trung hạn của <strong>NCHMF</strong> kết hợp dự báo 10 ngày từ <strong>AccuWeather</strong> để lên kịch bản chuyển hướng cung đường dự phòng.</li>
+                </ul>
+                <a href="https://www.nchmf.gov.vn/kttv/vi-VN/1/du-bao-khi-hau-10-15.html" target="_blank" class="inline-link">🔗 Xem nguồn dự báo khí tượng →</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="doc-footer">
-        <div class="footer-logo-block">
-            <span class="brand-slug">BROUGHT TO YOU BY SSV</span>
-            <span style="font-size: 9pt; color: #a0aec0; font-weight: bold;">OPERATIONS • TECHNOLOGY • TIMING</span>
+    <!-- ============================================= -->
+    <!-- TRANG 3: DÒNG LỊCH TRÌNH CÁC SỰ KIỆN SẮP TỚI -->
+    <!-- ============================================= -->
+    <div class="page">
+        <div class="page-header">
+            <h1 class="page-title">LỊCH TRÌNH SỰ KIỆN TỚI</h1>
+            <span class="page-subtitle">Trang 3: Cập nhật điểm tin các giải đấu trong 1 - 2 tháng tới</span>
         </div>
-        <div class="footer-text">
-            We track the regional operational shifts of endurance sports infrastructure so you can build memorable participant communities. Evaluating your dynamic timing or course tracking matrix for the upcoming season? Let's check your layout parameters together.
+
+        <!-- SỰ KIỆN 1 -->
+        <div class="event-row-p3">
+            <div class="event-date-badge-p3">
+                <span class="month">Tháng 8</span>
+                <span class="day">01</span>
+                <span class="year">2026</span>
+            </div>
+            <div class="event-content-p3">
+                <h3 class="event-name-p3">Giải Aquathlon Đồng Hới 2026</h3>
+                <p class="event-details-p3">Giải đấu hai môn phối hợp bơi và chạy quy tụ đông đảo các vận động viên phong trào tại khu vực miền Trung. Sự kiện yêu cầu kiểm soát chặt chẽ thời gian chuyển chặng và điểm cut-off time phần bơi.</p>
+            </div>
         </div>
-    </footer>
-</div>
+
+        <!-- SỰ KIỆN 2 -->
+        <div class="event-row-p3">
+            <div class="event-date-badge-p3">
+                <span class="month">Tháng 8</span>
+                <span class="day">16</span>
+                <span class="year">2026</span>
+            </div>
+            <div class="event-content-p3">
+                <h3 class="event-name-p3">Vietnam Trail Marathon - Chặng Mộc Châu</h3>
+                <p class="event-details-p3">Thử thách địa hình trail dốc lớn đòi hỏi công tác y tế hiện trường nghiêm ngặt. Hệ thống giám sát thời tiết Windy sẽ được ứng dụng liên tục để cập nhật radar mây mù trên đỉnh núi.</p>
+            </div>
+        </div>
+
+        <!-- SỰ KIỆN 3 -->
+        <div class="event-row-p3">
+            <div class="event-date-badge-p3">
+                <span class="month">Tháng 9</span>
+                <span class="day">05</span>
+                <span class="year">2026</span>
+            </div>
+            <div class="event-content-p3">
+                <h3 class="event-name-p3">Techcombank Ho Chi Minh City International Marathon</h3>
+                <p class="event-details-p3">Giải road marathon quy mô lớn với mật độ finisher đổ về vạch đích cực cao. Hạ tầng đo thời gian sẽ tập trung vào giải pháp chống rớt chip diện rộng tại các wave xuất phát và đích.</p>
+            </div>
+        </div>
+
+        <!-- SỰ KIỆN 4 -->
+        <div class="event-row-p3">
+            <div class="event-date-badge-p3">
+                <span class="month">Tháng 9</span>
+                <span class="day">20</span>
+                <span class="year">2026</span>
+            </div>
+            <div class="event-content-p3">
+                <h3 class="event-name-p3">Corporate Fun Run & Family Day - HCMC</h3>
+                <p class="event-details-p3">Sự kiện chạy phong trào tích hợp ngày hội doanh nghiệp, ưu tiên hạ tầng check-in bằng mã QR tự động trên máy tính bảng để triệt tiêu bài toán ùn tắc trước giờ xuất phát.</p>
+            </div>
+        </div>
+
+        <!-- PHẦN 5: VALUE DROP VÀ LỜI KÊU GỌI HÀNH ĐỘNG -->
+        <div class="value-box-p3">
+            <div class="value-title-p3">PHẦN 5: GIÁ TRỊ CỦA SSV</div>
+            <p>Bản tin được thực hiện bởi Sportstats Vietnam (SSV). Chúng tôi theo dõi các cải tiến công nghệ và tiêu chuẩn vận hành toàn cầu, để anh/chị có thể tập trung hoàn toàn vào việc xây dựng cộng đồng chạy bộ của mình.</p>
+            <p>Anh/chị đang lên sơ đồ đường chạy cho mùa giải mới và cần một góc nhìn chuyên gia để tối ưu hóa vị trí đặt thảm tính giờ chống gian lận?</p>
+            
+            <!-- ĐƯỜNG LINK GOOGLE FORM -->
+            <a href="https://forms.google.com/YOUR_FORM_LINK" target="_blank" class="btn-form-p3">BẤM VÀO ĐÂY ĐỂ ĐIỀN THÔNG TIN GIẢI CỦA BẠN</a>
+            
+            <p style="margin: 0; font-size: 13px; color: #666;">Tú và đội ngũ SSV luôn sẵn sàng thực hiện một cuộc gọi tư vấn 10 phút hoàn toàn miễn phí cùng anh/chị.</p>
+
+            <div class="contact-info-p3">
+                <strong>Nguyễn Anh Tú (Mr.)</strong><br>
+                Giám đốc Điều hành | Sportstats Vietnam<br>
+                📞 (+84) 964995882 | ✉️ <a href="mailto:tu@sportstats.one">tu@sportstats.one</a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
